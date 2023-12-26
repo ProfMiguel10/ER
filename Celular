@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ER {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String tel = in.nextLine();
+		in.close();
+		String padrao = "\\(\\d{2}\\) \\d{5}-\\d{4}";
+
+		Pattern regex = Pattern.compile(padrao);
+		Matcher matcher = regex.matcher(tel);
+
+		if (matcher.matches()) {
+			System.out.println("ok");
+		} else {
+			System.out.println("Erro");
+		}
+
+	}
+}
