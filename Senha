@@ -1,0 +1,14 @@
+package exemplo;
+
+import java.util.Scanner;
+
+public class ER {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String senha = in.nextLine();
+		in.close();
+		boolean teste = senha.matches("\\d{5}");
+		System.out.println("Senha Padrão:" + teste);
+	}
+}
