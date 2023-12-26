@@ -9,6 +9,7 @@ public class ER {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		String email = in.nextLine();
+		in.close();
 		String padrao = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
 		Pattern regex = Pattern.compile(padrao);
 		Matcher matcher = regex.matcher(email);
