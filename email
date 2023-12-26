@@ -1,0 +1,21 @@
+package exemplo;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ER {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String email = in.nextLine();
+		String padrao = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+		Pattern regex = Pattern.compile(padrao);
+		Matcher matcher = regex.matcher(email);
+		if (matcher.matches()) {
+			System.out.println("E-mail correto");
+		} else {
+			System.out.println("E-mail no formato errado");
+		}
+	}
+}
