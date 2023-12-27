@@ -1,0 +1,18 @@
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ER {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String frase = in.nextLine();
+		in.close();
+		Pattern regex = Pattern.compile("\\bM\\w*");
+		Matcher matcher = regex.matcher(frase);
+
+		while (matcher.find()) {
+			System.out.println("Palavra que começa com 'M': " + matcher.group());
+		}
+	}
+}
