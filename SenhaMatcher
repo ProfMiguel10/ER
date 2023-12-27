@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ER {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String senha = in.nextLine();
+		in.close();
+		Pattern pattern = Pattern.compile("\\d{7,10}");
+		Matcher matcher = pattern.matcher(senha);
+		if (matcher.matches()) {
+			System.out.println("Senha Ok");
+		} else {
+			System.out.println("Senha Ruim");
+		}
+	}
+}
