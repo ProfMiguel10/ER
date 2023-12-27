@@ -1,0 +1,13 @@
+
+import java.util.Scanner;
+
+public class ER {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String senha = in.nextLine();
+		in.close();
+		boolean teste = senha.matches("\\w{2,5}\\d{2}\\D{2}");
+		System.out.println("Senha Padrão:" + teste);
+	}
+}
