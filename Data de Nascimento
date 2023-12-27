@@ -6,10 +6,10 @@ public class ER {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		String cpf = in.nextLine();
+		String data = in.nextLine();
 		in.close();
 		Pattern pattern = Pattern.compile("\\d{2}-\\d{2}-\\d{4}");
-		Matcher matcher = pattern.matcher(cpf);
+		Matcher matcher = pattern.matcher(data);
 		if (matcher.matches()) {
 			System.out.println("Ok");
 		} else {
